@@ -1,0 +1,23 @@
+<html>
+
+<head>
+<style>
+body{
+background-color:skyblue;
+}
+</style>
+</head>
+<body>
+{% load staticfiles %}
+<h5>How is our Company(Mieone) Service</h5>
+{% csrf_token %}
+<form action ="/portal/getfeedback/ "method = 'post'>
+<input type = 'radio'name = 's' value = '0'>Excellent</input></br>
+<input type = 'radio'name = 's' value = '1'>Good</input></br>
+<input type = 'radio' name = 's'value = '2'>Average</input></br>
+<input type = 'radio' name = 's'value = '3'>Bad</input></br>
+<input type = "submit" value="submit"/>
+</form>
+<a href="/portal/viewfeedback/" style = "text-decoration:none">View the Feedback</a>
+</body>
+</html>
